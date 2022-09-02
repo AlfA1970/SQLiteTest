@@ -11,11 +11,10 @@ public class ConnectSQLite {
     private static Connection conn;
     public static Connection getConnectSQLite() {
 
-        String db = SQLDB.getClass().getResource("/database/SQLDatabseTest.db").getPath();
-
         try {
-            conn = DriverManager.getConnection(db);
-        } catch (SQLException e) {
+            Class.forName("org.sqlite.JDBC");
+            conn = DriverManager.getConnection(SQLITE);
+        } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
 
