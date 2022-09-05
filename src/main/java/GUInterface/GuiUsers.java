@@ -37,18 +37,14 @@ public class GuiUsers extends JFrame{
         String[][] data = {
                 {"1","Woody","9890Ykd"},
                 {"2","Gabri","7852lkj"},
-                {"1","Hole","876tghf"}
+                {"3","Hole","876tghf"}
         };
         DefaultTableModel model = new DefaultTableModel(data,columns);
         tbUserList.setModel(model);
 
         JTableHeader th = tbUserList.getTableHeader();
-        tbUserList.add(th, BorderLayout.NORTH);
-        th.setTable(tbUserList);
         TableColumnModel tcolumns = tbUserList.getColumnModel();
-
-
-
-
+        tcolumns.setColumnMargin(80);
+        th.setColumnModel(tcolumns);
     }
 }
