@@ -20,10 +20,6 @@ public class GuiUsers extends JFrame{
     private JPanel jpTable;
     private JPanel jpTableButtons;
 
-    public  GuiUsers(){
-
-    }
-
     public void initComponents() {
         setContentPane(jpMainUsers);
         setBounds(0,0,480,720);
@@ -33,7 +29,7 @@ public class GuiUsers extends JFrame{
     }
 
     private void createTable(){
-        String[] columns = {"Row","Username", "Password"};
+        String[] columns = {"Row","User name", "Password"};
         String[][] data = {
                 {"1","Woody","9890Ykd"},
                 {"2","Gabri","7852lkj"},
@@ -44,7 +40,7 @@ public class GuiUsers extends JFrame{
 
         JTableHeader th = tbUserList.getTableHeader();
         TableColumnModel tcolumns = tbUserList.getColumnModel();
-        tcolumns.setColumnMargin(80);
-        th.setColumnModel(tcolumns);
+        tcolumns.setColumnMargin(5);
+        //th.setColumnModel(tcolumns);
     }
 }
