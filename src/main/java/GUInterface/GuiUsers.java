@@ -2,6 +2,7 @@ package GUInterface;
 
 import javax.swing.*;
 import javax.swing.table.*;
+import java.awt.*;
 
 public class GuiUsers extends JFrame{
     private JPanel jpMainUsers;
@@ -42,6 +43,7 @@ public class GuiUsers extends JFrame{
         tbUserList.setModel(model);
 
         JTableHeader th = tbUserList.getTableHeader();
+        tbUserList.add(th, BorderLayout.NORTH);
         th.setTable(tbUserList);
         TableColumnModel tcolumns = tbUserList.getColumnModel();
 
