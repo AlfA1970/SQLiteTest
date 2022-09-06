@@ -10,10 +10,11 @@ public class DAOUserImp implements DAOUser {
     Connection conn;
     Statement stmt;
     @Override
-    public void read() {
+    public String[][] read() {
 
         String SQL = "SELECT * FROM users";
         conn = ConnectSQLite.getConnectSQLite();
+        String[][] userList = new String[1][2];
         try {
             stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery(SQL);
@@ -22,12 +23,14 @@ public class DAOUserImp implements DAOUser {
                 String password = rs.getString("password");
                 System.out.println("user: " + user + "password: " + password);
             }
-            
+
             stmt.close();
             conn.close();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+
+        return null;
     }
 
     @Override
