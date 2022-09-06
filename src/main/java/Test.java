@@ -18,11 +18,8 @@ public class Test {
             }
         });
 
-        /*
         Connection conn = ConnectSQLite.getConnectSQLite();
         DAOUserImp daoUser = new DAOUserImp();
         daoUser.read();
-
-         */
     }
 }

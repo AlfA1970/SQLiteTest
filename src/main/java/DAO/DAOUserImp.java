@@ -22,13 +22,12 @@ public class DAOUserImp implements DAOUser {
                 String password = rs.getString("password");
                 System.out.println("user: " + user + "password: " + password);
             }
+            
             stmt.close();
             conn.close();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
-
     }
 
     @Override
