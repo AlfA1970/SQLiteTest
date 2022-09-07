@@ -19,7 +19,7 @@ public class ConnectSQLite {
         try {
             Class.forName("org.sqlite.JDBC");
             conn = DriverManager.getConnection(SQLITE);
-            JOptionPane.showMessageDialog(null, "Connected!!", "Message", INFORMATION_MESSAGE);
+            //JOptionPane.showMessageDialog(null, "Connected!!", "Message", INFORMATION_MESSAGE);
         } catch (SQLException | ClassNotFoundException e) {
             JOptionPane.showMessageDialog(null, "Error", "Message", JOptionPane.WARNING_MESSAGE);
             throw new RuntimeException(e);

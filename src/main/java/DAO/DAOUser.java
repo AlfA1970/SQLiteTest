@@ -2,6 +2,6 @@ package DAO;
 
 public interface DAOUser {
 
-    void read();
+    String[][] read();
     void insert();
 }
