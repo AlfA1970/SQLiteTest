@@ -27,8 +27,6 @@ public class DAOUserImp implements DAOUser {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
-
     }
 
     @Override
